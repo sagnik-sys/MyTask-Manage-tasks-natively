@@ -1,16 +1,91 @@
-# React + Vite
+# MyTask — Manage Tasks Natively
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A clean, minimal todo app built with **React** and **Tailwind CSS** that lets you manage tasks entirely in the browser — no backend, no account required.
 
-Currently, two official plugins are available:
+🔗 **Live Demo:** [https://mytask-lyart.vercel.app/](https://mytask-lyart.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- ✅ **Add tasks** — Type a task and save it instantly
+- ✏️ **Edit tasks** — Pull any task back into the input field for quick edits
+- 🗑️ **Delete tasks** — Remove tasks with a confirmation prompt
+- ☑️ **Complete tasks** — Check off tasks; completed ones get a strikethrough
+- 👁️ **Toggle completed visibility** — Show or hide finished tasks with a single checkbox
+- 💾 **Persistent storage** — All tasks are saved to `localStorage` and survive page refreshes
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech Stack
+
+| Technology | Purpose |
+|---|---|
+| React 18 | UI & state management |
+| Tailwind CSS | Styling |
+| uuid (`uuidv4`) | Unique IDs for each task |
+| localStorage | Client-side persistence |
+| Vercel | Deployment |
+
+---
+
+## Project Structure
+
+```
+src/
+├── components/
+│   ├── Navbar.jsx       # Top navigation bar
+│   └── Footer.jsx       # Page footer
+└── App.jsx              # Core todo logic and UI
+```
+
+---
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v16 or higher)
+- npm or yarn
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/your-username/mytask.git
+cd mytask
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
+```
+
+The app will be available at `http://localhost:5173`.
+
+### Build for Production
+
+```bash
+npm run build
+```
+
+---
+
+## How It Works
+
+- Tasks are stored as an array of objects in React state, each with a `todo` string, unique `id`, and `isCompleted` boolean.
+- On mount, tasks are loaded from `localStorage`. Any subsequent change to the task list is automatically saved back.
+- Editing a task removes it from the list and repopulates the input field — saving it adds it back as a new entry.
+
+---
+
+
+## Contact
+
+Email: [sagnikbhattacharyya3@outlook.com](mailto:sagnikbhattacharyya3@outlook.com)
+
+---
+
+### Thank You!!
+
